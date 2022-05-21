@@ -1,5 +1,5 @@
 # matlab_synthesizer
-This repo contains a library made up of 3 MATLAB functions which can be used to synthesize chords via subtractive synthesis.
+This repo contains a library made up of 3 MATLAB functions which can be used to synthesize chords via subtractive synthesis, plus a couple of examples.
 
 ## Function makeNote
 This is the core of the library: it produces a tone (with value normalized to 1) by low-pass filtering a PWM signal, obtained comparing a sawtooth wave and a low-frequency sinusoid.
