@@ -2,7 +2,7 @@ clear
 close all
 clc
 
-addpath('library/')
+addpath('../library/')
 
 fs = 44100;         % Hz
 T_note = 1.25;      % s 4/4
