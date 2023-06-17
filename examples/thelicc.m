@@ -2,7 +2,7 @@ clear
 close all
 clc
 
-addpath('library/')
+addpath('../library/')
 
 disp('Bear yourself')
 disp('for')
@@ -26,31 +26,31 @@ envelope_4_4 = interp1(env_t*4*T_quarter, env_val, (0:1/fs:4*T_quarter-1/fs), 'p
 
 %% Licc
 % A - 1/4
-licc = envelope_1_4.*makechord('A', 4, 'only', T_quarter, fs);
+licc = envelope_1_4.*makeChord('A', 4, 'only', T_quarter, fs);
 T_tot = T_tot + T_quarter;
 
 % B - 1/4
-licc = [licc; envelope_1_4.*makechord('B', 4, 'only', T_quarter, fs)];
+licc = [licc; envelope_1_4.*makeChord('B', 4, 'only', T_quarter, fs)];
 T_tot = T_tot + T_quarter;
 
 % C - 1/4
-licc = [licc; envelope_1_4.*makechord('C', 5, 'only', T_quarter, fs)];
+licc = [licc; envelope_1_4.*makeChord('C', 5, 'only', T_quarter, fs)];
 T_tot = T_tot + T_quarter;
 
 % D - 1/4
-licc = [licc; envelope_1_4.*makechord('D', 5, 'only', T_quarter, fs)];
+licc = [licc; envelope_1_4.*makeChord('D', 5, 'only', T_quarter, fs)];
 T_tot = T_tot + T_quarter;
 
 % B - 2/4
-licc = [licc; envelope_2_4.*makechord('B', 4, 'only', 2*T_quarter, fs)];
+licc = [licc; envelope_2_4.*makeChord('B', 4, 'only', 2*T_quarter, fs)];
 T_tot = T_tot + 2*T_quarter;
 
 % G - 1/4
-licc = [licc; envelope_1_4.*makechord('G', 4, 'only', T_quarter, fs)];
+licc = [licc; envelope_1_4.*makeChord('G', 4, 'only', T_quarter, fs)];
 T_tot = T_tot + T_quarter;
 
 % A - 4/4
-licc = [licc; envelope_4_4.*makechord('A', 4, 'only', 4*T_quarter, fs)];
+licc = [licc; envelope_4_4.*makeChord('A', 4, 'only', 4*T_quarter, fs)];
 T_tot = T_tot + 4*T_quarter;
 
 t = (0:1/fs:T_tot-1/fs)';

@@ -18,7 +18,8 @@ env_val = [0 1 0.7 0.7 0]';
 
 [envelope_note, env_t_cont] = makeEnvelope(env_val, env_t, T_note, fs);
 
-figure(1), plot(env_t_cont, 'b', env_t, env_val, 'ob'), grid on
+figure(1), plot(env_t_cont, envelope_note, 'b', env_t, env_val, 'ob')
+grid on
 
 %% Progression:
 % D (5)
